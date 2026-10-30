@@ -1,0 +1,66 @@
+body {
+    background-image: url("fondo.jpg");
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #07001f;
+    color: white;
+    font-family: system-ui, sans-serif;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 320px;
+    margin: 40px auto 0;
+}
+
+.boton {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: #9b5cf6;
+}
+
+@media (orientation: portrait) {
+    body {
+        background-size: cover;
+    }
+}
+
+/* El PIN escondido necesita más rango que el sargento #pantalla-pin */
+#pantalla-pin.oculto {
+    display: none;
+}
+
+.oculto {
+    display: none;
+}
+
+#pantalla-pin {
+    max-width: 320px;
+    margin: 120px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#pantalla-pin input {
+    padding: 18px;
+    border-radius: 16px;
+    border: none;
+    text-align: center;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
