@@ -1,13 +1,29 @@
 body {
-    background-image: url("fondo.jpg");
-    background-size: contain;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-color: #07001f;
+    margin: 0; /* el body trae un margen invisible de fábrica: fuera */
     color: white;
     font-family: system-ui, sans-serif;
-    text-align: center;
+    background-color: #07001f;
+}
+
+/* La caja que hace de "pantalla del celular": ocupa toda la
+   pantalla y lleva el fondo pegado a la parte de abajo */
+.pantalla {
+    min-height: 100vh;
+    min-height: 100dvh;
     padding: 40px 20px;
+    text-align: center;
+    background-color: #07001f;
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+/* PC (ventana horizontal): modo póster con bandas fundidas */
+@media (orientation: landscape) {
+    .pantalla {
+        background-size: contain;
+    }
 }
 
 nav {
@@ -32,18 +48,12 @@ nav {
     background: #9b5cf6;
 }
 
-@media (orientation: portrait) {
-    body {
-        background-size: cover;
-    }
+.oculto {
+    display: none;
 }
 
 /* El PIN escondido necesita más rango que el sargento #pantalla-pin */
 #pantalla-pin.oculto {
-    display: none;
-}
-
-.oculto {
     display: none;
 }
 
